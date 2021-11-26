@@ -21,7 +21,7 @@
     <ion-row>
       <ion-col *ngFor="let movie of movies" size="12" size-md="4">
         <app-movie-card
-          [movie]="movie"
+        [movie]="movie"
           (cardClicked)="goToMovie(movie.id)"
           (voteUpClick)="onVoteUp(movie)"
           (voteDownClick)="onVoteDown(movie)"
