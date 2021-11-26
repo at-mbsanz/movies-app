@@ -150,7 +150,7 @@
     {
       "id": 9,
       "title": "Alien Nation: The Udara Legacy",
-      "poster": "http://dummyimage.com/400x600.png/5fa2dd/ffffff",
+      "poster": "https://res.cloudinary.com/teepublic/image/private/s--Yzf-V8M9--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_36538b,e_outline:48/co_36538b,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1574320628/production/designs/6821655_0.jpg",
       "genre": [
         "Sci-Fi"
       ],
@@ -180,8 +180,8 @@
       ]
     },
     {
-      "title": "Mi new film added",
-      "poster": "http://dummyimage.com/400x600.png/cc0000/ffffff",
+      "title": "My new film added",
+      "poster": "https://www.chefbakers.com/userfiles/upload-your-picture6.jpg",
       "genre": [
         "Comedy",
         "Musical",
@@ -203,7 +203,7 @@
       "gender": "Male",
       "bornCity": "Ciduren",
       "birthdate": "24/12/1957",
-      "img": "http://dummyimage.com/600x400.png/dddddd/000000",
+      "img": "https://www.chefbakers.com/userfiles/upload-your-picture6.jpg",
       "rating": 2.03,
       "movies": [
         3,
@@ -258,7 +258,7 @@
       "gender": "Male",
       "bornCity": "Gouqi",
       "birthdate": "30/12/1990",
-      "img": "https://dummyimage.com/600x400.png/2f125d/ffffff",
+      "img": "https://www.chefbakers.com/userfiles/upload-your-picture6.jpg",
       "rating": 3.92,
       "movies": [
         1,
@@ -275,7 +275,7 @@
       "gender": "Male",
       "bornCity": "Pitomača",
       "birthdate": "02/01/1968",
-      "img": "https://dummyimage.com/600x400.png/bf125d/ffffff",
+      "img": "https://www.chefbakers.com/userfiles/upload-your-picture6.jpg",
       "rating": 8.79,
       "movies": [
         1,
@@ -291,7 +291,7 @@
       "gender": "Male",
       "bornCity": "Fulong",
       "birthdate": "04/09/1979",
-      "img": "https://dummyimage.com/600x400.png/bf12fd/ffffff",
+      "img": "https://www.chefbakers.com/userfiles/upload-your-picture6.jpg",
       "rating": 9.82,
       "movies": [
         5,
