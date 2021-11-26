@@ -6,7 +6,27 @@
     <ion-title>Actores</ion-title>
   </ion-toolbar>
 </ion-header>
-[actor]="actor"
-<ul>  
-  
-</ul>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="!actors"></ion-spinner>
+
+  <!-- fab placed to the top end -->
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge>
+ 
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let actor of actors" size="12" size-md="4">
+        {{actor.first_name}}
+        {{actor.last_name}}
+         <!-- //no puedo pintar la api como en el card component de movies ¿ por qué???-->
+
+
+
+
+         
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
