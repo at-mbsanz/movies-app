@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="!movies"></ion-spinner>
+
+  <!-- fab placed to the top end -->
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge>
+    <ion-fab-button [routerLink]="['new-movie']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let movie of movies" size="12" size-md="4">
+        <app-movie-card
+          [movie]="movie"
+          (cardClicked)="goToMovie(movie.id)"
+          (voteUpClick)="onVoteUp(movie)"
+          (voteDownClick)="onVoteDown(movie)"
+        ></app-movie-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

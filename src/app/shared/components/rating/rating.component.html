@@ -1,0 +1,23 @@
+<ion-grid class="rating ion-no-padding">
+  <ion-row
+    class="ion-text-center ion-justify-content-center ion-align-items-center"
+  >
+    <ion-col size="5">
+      <ion-button size="small" (click)="voteUp()">
+        <ion-icon slot="start" color="success" name="thumbs-up"></ion-icon>
+        {{ votesUp }}
+      </ion-button>
+    </ion-col>
+    <ion-col size="2">
+      <span class="bold">
+        {{ (votesUp / (votesUp + votesDown)) * 10 | number: "1.1-1" }}
+      </span>
+    </ion-col>
+    <ion-col size="5">
+      <ion-button size="small" (click)="voteDown()">
+        <ion-icon slot="start" color="danger" name="thumbs-down"></ion-icon>
+        {{ votesDown }}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

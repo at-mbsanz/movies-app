@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Nueva película</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="movieForm" (submit)="submitMovieForm()">
+    <ion-item>
+      <ion-label position="stacked">Título</ion-label>
+      <ion-input
+        formControlName="title"
+        type="text"
+        placeholder="Título"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Póster (url)</ion-label>
+      <ion-input
+        formControlName="poster"
+        type="url"
+        placeholder="Póster (url)"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estudios</ion-label>
+      <ion-select formControlName="company" placeholder="Selecciona un estudio">
+        <ion-select-option value="Estudio 1">Estudio 1</ion-select-option>
+        <ion-select-option value="Estudio 2">Estudio 2</ion-select-option>
+        <ion-select-option value="Estudio 3">Estudio 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Año</ion-label>
+      <ion-input
+        formControlName="year"
+        type="number"
+        placeholder="Año"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Duración</ion-label>
+      <ion-input
+        formControlName="duration"
+        type="number"
+        placeholder="Duración"
+      ></ion-input>
+    </ion-item>
+
+    <div class="ion-margin ion-text-right">
+      <ion-button color="light" type="button" (click)="resetForm()">
+        Reiniciar
+      </ion-button>
+      <ion-button
+        color="primary"
+        type="submit"
+        [disabled]="movieForm.invalid || loading"
+      >
+        Guardar formulario
+      </ion-button>
+    </div>
+    <div *ngIf="loading" class="ion-margin ion-text-right">
+      <ion-spinner></ion-spinner>
+    </div>
+  </form>
+</ion-content>

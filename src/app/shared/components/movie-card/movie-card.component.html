@@ -1,0 +1,33 @@
+<ion-card>
+  <img
+    class="movie-img pointer"
+    [src]="movie.poster"
+    onerror="this.src = './assets/error.jpg'"
+    (click)="onClickCard()"
+  />
+
+  <ion-card-header class="pointer" (click)="onClickCard()">
+    <ion-card-title>{{ movie.title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="5">
+          <span *ngIf="!movie.genre?.length">Género desconocido</span>
+          <span *ngFor="let currentGenre of movie.genre"
+            >#{{ currentGenre }}
+          </span>
+        </ion-col>
+        <ion-col size="7">
+          <app-rating
+            [votesUp]="movie.ratingPositive"
+            [votesDown]="movie.ratingNegative"
+            (voteUpClick)="onVoteUp()"
+            (voteDownClick)="onVoteDown()"
+          ></app-rating>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

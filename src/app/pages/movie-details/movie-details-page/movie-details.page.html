@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{ movie?.title }} ({{ movie?.year}})</ion-title>
+
+    <ion-button slot="end" (click)="removeMovie()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="movie; else noMovie">
+    <ion-img class="movie-img" [src]="movie?.poster"></ion-img>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-start">
+            <h2>Puntuación</h2>
+            <app-rating
+              [votesUp]="movie?.ratingPositive"
+              [votesDown]="movie?.ratingNegative"
+              (voteUpClick)="onVoteUp()"
+              (voteDownClick)="onVoteDown()"
+            ></app-rating>
+          </ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text class="ion-text-end">
+            <h2>Duración</h2>
+            <p>{{ movie?.duration | movieDuration }}</p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <h2>Géneros</h2>
+          <span *ngFor="let currentGenre of movie?.genre"
+            >#{{ currentGenre }}
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+  <ng-template #noMovie>
+    <ion-spinner></ion-spinner>
+  </ng-template>
+</ion-content>
