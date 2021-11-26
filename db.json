@@ -29,7 +29,7 @@
       ],
       "year": 1987,
       "duration": 187,
-      "ratingPositive": 2,
+      "ratingPositive": 3,
       "ratingNegative": 8,
       "actors": [
         5,
@@ -131,7 +131,7 @@
     {
       "id": 8,
       "title": "Godzilla vs. Mechagodzilla II (Gojira VS Mekagojira)",
-      "poster":"https://i.pinimg.com/originals/80/38/31/8038310e62a323235221809536a7ac02.jpg",
+      "poster": "https://i.pinimg.com/originals/80/38/31/8038310e62a323235221809536a7ac02.jpg",
       "genre": [
         "Action",
         "Drama",
@@ -194,8 +194,6 @@
       "actors": [],
       "id": 11
     }
-   
-   
   ],
   "actors": [
     {
