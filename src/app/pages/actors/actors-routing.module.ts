@@ -11,8 +11,13 @@ const routes: Routes = [
     component: ActorsPage,
   },
 { 
+  path: ':id',
+  loadChildren: () =>
+    import('../actor-details/actor-details.module').then(
+      (m) => m.ActorDetailsPageModule
+    ),
+},
 
-}
 ];
 
 @NgModule({

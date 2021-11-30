@@ -19,13 +19,14 @@
     <ion-row>
       <ion-col *ngFor="let actor of actors" size="12" size-md="4">
         {{actor.first_name}}
-        {{actor.last_name}}
-         <!-- //no puedo pintar la api como en el card component de movies ¿ por qué???-->
+        <app-actor-card
+        [actor]="actor"
+          (cardClicked)="goToActor(actor.id)"
+        
+    
+        ></app-actor-card>
+         <!-- // importar en actors.module shared module para poder pintar-->
 
-
-
-
-         
       </ion-col>
     </ion-row>
   </ion-grid>
